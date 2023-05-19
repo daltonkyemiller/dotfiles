@@ -1,14 +1,15 @@
-# open terminal
-cmd - return : open -n -a "kitty"
+# open apps
+alt + cmd - 1 : open -n -a "Slack"
+alt + cmd - 2 : open -n -a "kitty"
+alt + cmd - 3 : open -n -a "Arc" 
+alt + cmd - 4 : open -n -a "Obsidian"
 
-# open chrome 
-cmd + shift - return : open -n -a "Google Chrome" 
 
 # changing focus
-# alt - h : yabai -m window --focus west
-# alt - j : yabai -m window --focus south
-# alt - k : yabai -m window --focus north
-# alt - l : yabai -m window --focus east
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
 
 # Focus spaces
 alt - 1 : yabai -m space --focus 1
@@ -19,34 +20,70 @@ alt - 5 : yabai -m space --focus 5
 
 
 # moving windows
-shift + alt - h : yabai -m window --warp west
-shift + alt - j : yabai -m window --warp south
-shift + alt - k : yabai -m window --warp north
-shift + alt - l : yabai -m window --warp east
+alt + shift - h : yabai -m window --warp west
+alt + shift - j : yabai -m window --warp south
+alt + shift - k : yabai -m window --warp north
+alt + shift - l : yabai -m window --warp east
 
 # Resize windows
-lctrl + alt - h : yabai -m window --resize left:-50:0; \
+alt + lctrl - h : yabai -m window --resize left:-50:0; \
                   yabai -m window --resize right:-50:0
-lctrl + alt - j : yabai -m window --resize bottom:0:50; \
+alt + lctrl - j : yabai -m window --resize bottom:0:50; \
                   yabai -m window --resize top:0:50
-lctrl + alt - k : yabai -m window --resize top:0:-50; \
+alt + lctrl - k : yabai -m window --resize top:0:-50; \
                   yabai -m window --resize bottom:0:-50
-lctrl + alt - l : yabai -m window --resize right:50:0; \
+alt + lctrl - l : yabai -m window --resize right:50:0; \
                   yabai -m window --resize left:50:0
 
+# move window to space left and right
+alt + cmd + shift - h : yabai -m window --space prev; yabai -m space --focus prev
+alt + cmd + shift - l : yabai -m window --space next; yabai -m space --focus next
+
 # Equalize size of windows
-ctrl + alt - e : yabai -m space --balance
+alt + ctrl - e : yabai -m space --balance
 
 # Float / Unfloat window
-shift + alt - space : \ yabai -m window --toggle float; \
+alt + shift - space : \ yabai -m window --toggle float; \
     yabai -m window --toggle border
+
+# Toggle border(blur)
+alt + shift - b : yabai -m window --toggle border
 
 # Make window native fullscreen
 alt - f         : yabai -m window --toggle zoom-fullscreen
-shift + alt - f : yabai -m window --toggle native-fullscreen
+alt + shift - f : yabai -m window --toggle native-fullscreen
 
 # Restart Yabai
-shift + lctrl + alt - r : \
-    /usr/bin/env osascript <<< \
-        "display notification \"Restarting Yabai\" with title \"Yabai\""; \
-    launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+alt + shift + lctrl - r : yabai --stop-service && yabai --start-service
+
+# change layout of desktop
+alt + ctrl - b : yabai -m space --layout bsp
+alt + ctrl - f : yabai -m space --layout float
+
+# Mapping ctrl + j to down in arc. I want to be able to use it to navigate select menus
+ctrl - j [
+    "Arc": skhd -k "down"
+    "Obsidian": skhd -k "down"
+    "Finder": skhd -k "down"
+]
+
+ctrl - k [
+    "Arc": skhd -k "up"
+    "Obsidian": skhd -k "up"
+    "Finder": skhd -k "up"
+]
+
+ctrl - l [
+    "Arc": skhd -k "right"
+    "Obsidian": skhd -k "right"
+    "Finder": skhd -k "right"
+]
+
+ctrl - h [
+    "Arc": skhd -k "left"
+    "Obsidian": skhd -k "left"
+    "Finder": skhd -k "left"
+]
+
+
+

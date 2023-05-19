@@ -4,6 +4,9 @@
 # .config mostly neovim
 !/.config/
 !/.config/nvim/lua/user/
+/.config/raycast/
+/.config/github-copilot/
+/.config/yarn/
 
 # zsh
 !.zshrc
