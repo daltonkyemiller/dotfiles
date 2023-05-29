@@ -1,5 +1,7 @@
+
 # ignore everything from the root by default
 /*
+.DS_STORE
 
 # .config mostly neovim
 !/.config/
