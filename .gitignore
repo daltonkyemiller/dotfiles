@@ -10,7 +10,9 @@
 
 # zsh
 !.zshrc
+!.zsh
 !.oh-my-zsh/
+!.zprofile
 
 # git
 !.gitignore
