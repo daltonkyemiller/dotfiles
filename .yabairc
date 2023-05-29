@@ -23,7 +23,8 @@ yabai -m config auto_balance on
 yabai -m config window_border_radius 0
 
 # yabai -m config window_border on
-# yabai -m rule --add app!="^(Loom|Finder|ColorSlurp)$" manage=off 
+# yabai -m rule --add app!="^(Loom|ColorSlurp)$" manage=off 
+yabai -m rule --add app="^Loom$" manage=off
 # yabai -m rule --add app!="^(ColorSlurp)$" manage=off 
 # yabai -m rule --add app="^Arc$" subrole='AXSystemDialog' manage=off mouse_follows_focus=off
 # yabai -m config window_border on
