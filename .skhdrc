@@ -62,28 +62,25 @@ alt + ctrl - f : yabai -m space --layout float
 
 # Mapping ctrl + j to down in arc. I want to be able to use it to navigate select menus
 ctrl - j [
-    "Arc": skhd -k "down"
+    "Google Chrome": skhd -k "down"
     "Obsidian": skhd -k "down"
     "Finder": skhd -k "down"
 ]
 
 ctrl - k [
-    "Arc": skhd -k "up"
+    "Google Chrome": skhd -k "up"
     "Obsidian": skhd -k "up"
     "Finder": skhd -k "up"
 ]
 
 ctrl - l [
-    "Arc": skhd -k "right"
+    "Google Chrome": skhd -k "right"
     "Obsidian": skhd -k "right"
     "Finder": skhd -k "right"
 ]
 
 ctrl - h [
-    "Arc": skhd -k "left"
+    "Google Chrome": skhd -k "left"
     "Obsidian": skhd -k "left"
     "Finder": skhd -k "left"
 ]
-
-
-
