@@ -25,6 +25,8 @@ yabai -m config window_border_radius 0
 # yabai -m config window_border on
 # yabai -m rule --add app!="^(Loom|ColorSlurp)$" manage=off 
 yabai -m rule --add app="^Loom$" manage=off
+# loom always full opacity
+yabai -m rule --add app="^Loom$" opacity=1.0
 yabai -m rule --add app="^Screen Studio$" manage=off
 yabai -m rule --add app="^OBS$" manage=off
 # yabai -m rule --add app!="^(ColorSlurp)$" manage=off 
