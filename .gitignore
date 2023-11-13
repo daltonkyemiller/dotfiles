@@ -5,8 +5,11 @@
 
 # .config mostly neovim
 !/.config/
-!/.config/nvim/lua/user/
-/.config/raycast/
+!/.config/nvim/
+/.config/nvim.bak/
+/.config/qBittorrent/
+/.config/configstore/
+/.config/raycast/*
 /.config/github-copilot/
 /.config/yarn/
 

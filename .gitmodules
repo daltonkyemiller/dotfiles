@@ -3,5 +3,5 @@
 	url = https://github.com/AstroNvim/AstroNvim
 
 [submodule "neovim config"]
-  path = .config/nvim/lua/user
-  url = https://github.com/daltonkyemiller/astronvim_config
+  path = .config/nvim
+  url = https://github.com/daltonkyemiller/nvim-config
